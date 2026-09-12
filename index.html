@@ -1,20 +1,307 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Spoon-Knife</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nepal - The Land of the Himalayas</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #c41e3a;
+      /* Crimson, national color */
+      --secondary: #003893;
+      /* Blue accent */
+      --dark: #1a1a1a;
+      --light: #f9f9f9;
+      --accent-gold: #d4af37;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Hero Section */
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    header p {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin-bottom: 30px;
+      font-weight: 300;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .btn {
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+    }
+
+    .btn:hover {
+      background-color: #a01830;
+      transform: translateY(-2px);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    /* Section Styling */
+    section {
+      background: white;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      padding: 50px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--dark);
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: var(--primary);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .intro-text {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    /* Highlights Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    /* Stats Section */
+    .stats {
+      background: linear-gradient(135deg, var(--dark), #2c3e50);
+      color: white;
+      border-radius: 12px;
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .stat-item h4 {
+      font-size: 2.5rem;
+      color: var(--accent-gold);
+      margin-bottom: 5px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .stat-item p {
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--dark);
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: var(--primary);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      section {
+        padding: 30px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<img src="forkit.gif" id="octocat" alt="" />
+  <!-- Hero Section -->
+  <header>
+    <h1>Discover Nepal</h1>
+    <p>Where majestic mountains touch the sky, ancient cultures thrive, and hospitality knows no bounds.</p>
+    <a href="#explore" class="btn">Explore the Wonder</a>
+  </header>
 
-<!-- Feel free to change this text here -->
-<p>
-  Fork me? Fork you, @octocat!
-</p>
+  <!-- Main Content Container -->
+  <div class="container" id="explore">
+
+    <!-- About Section -->
+    <section>
+      <h2 class="section-title">The Roof of the World</h2>
+      <p class="intro-text">
+        Nestled in the lap of the mighty Himalayas, Nepal is a sovereign nation brimming with striking natural beauty,
+        rich biodiversity, and deep-rooted spiritual heritage. From towering snowy summits to lush tropical lowlands, it
+        offers a breathtaking tapestry of landscapes.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop"
+            alt="Himalayas" class="card-img">
+          <div class="card-content">
+            <h3>Majestic Peaks</h3>
+            <p>Home to eight of the world's ten highest mountains, including Mt. Everest, drawing trekkers and climbers
+              from across the globe.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1598091383028-de1e050e8292?q=80&w=600&auto=format&fit=crop"
+            alt="Culture & Heritage" class="card-img">
+          <div class="card-content">
+            <h3>Rich Heritage</h3>
+            <p>A living museum featuring ancient palaces, intricately carved pagodas, and vibrant festivals rooted in
+              Hindu and Buddhist traditions.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?q=80&w=600&auto=format&fit=crop"
+            alt="Wildlife" class="card-img">
+          <div class="card-content">
+            <h3>Diverse Wildlife</h3>
+            <p>Subtropical jungles in the south harbor rare and endangered species like the Bengal tiger, one-horned
+              rhinoceros, and Asian elephant.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="stats">
+      <div class="stat-item">
+        <h4>8,848.86m</h4>
+        <p>Elevation of Mt. Everest</p>
+      </div>
+      <div class="stat-item">
+        <h4>10+</h4>
+        <p>UNESCO World Heritage Sites</p>
+      </div>
+      <div class="stat-item">
+        <h4>120+</h4>
+        <p>Distinct Ethnic Languages</p>
+      </div>
+      <div class="stat-item">
+        <h4>Atithi Devo Bhava</h4>
+        <p>"Guest is God" Philosophy</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with love for <span>Nepal</span> &bull; All Rights Reserved</p>
+  </footer>
 
 </body>
+
 </html>
