@@ -1,0 +1,1 @@
+Hello. My name is Evan Daneshrad. I'm in a class called Honors Topics in Computer Science where we're learning about forking, branching, and GitKraken. Today I learned that forking is for when you want to take a repository that somebody else already made and make your own changes to it on your own repository without affecting the origional repository you forked from.
