@@ -1,0 +1,1 @@
+My name is Waller Morton, and I am a student at Harvard-Westlake. I created this file for Honors Topics in Computer Science. I learned that a fork is an independent copy of another person’s repository under my own GitHub account. Forking allows me to propose changes without having permission to modify the original repository directly.
