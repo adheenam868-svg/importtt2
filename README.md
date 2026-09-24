@@ -1,9 +1,17 @@
-### Well hello there!
+# Nuestra participación en el laboratorio 7
 
-This repository is meant to provide an example for *forking* a repository on GitHub.
+## Grupo
+Grupo 8
 
-Creating a *fork* is producing a personal copy of someone else's project. Forks act as a sort of bridge between the original repository and your personal copy. You can submit *Pull Requests* to help make other people's projects better by offering your changes up to the original project. Forking is at the core of social coding at GitHub.
+## Pasos realizados
+1. Se hizo el fork del repositorio
+2. Se modificaron los archivos
+3. Se creó un Pull Request
+4. Se respondió comentarios
+5. Se activó Watch (All activity)
+6. Se creó una organización, un repositorio y un team
+7. Se configuró un webhook con webhook.site
+8. Se creó un CONTRIBUTING.md y revisé el Audit Log
 
-After forking this repository, you can make some changes to the project, and submit [a Pull Request](https://github.com/octocat/Spoon-Knife/pulls) as practice.
-
-For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
+## Perfil de GitHub
+- Alessandro [Zuñiga] - [Barbatos17](https://github.com/Barbatos17)
