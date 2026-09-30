@@ -1,0 +1,3 @@
+Forking test
+yeees!
+cat < text.txt
